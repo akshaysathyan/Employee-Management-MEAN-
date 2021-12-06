@@ -1,0 +1,55 @@
+
+<mat-toolbar class="mat-elevation-z8">
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened">
+            menu
+        </mat-icon>
+        <mat-icon *ngIf="sidenav.opened">
+            close
+        </mat-icon>
+    </button>
+    Employee Management
+    <div class="btn-text-right">
+        <button type="button" class="btn btn-primary" (click)="logout()">Logout</button>
+  </div>
+  </mat-toolbar>
+ 
+     
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+  
+        <img class="avatar mat-elevation-z8" src="https://www.clipartkey.com/mpngs/m/237-2374286_administrator-network-icons-system-avatar-computer-admin-icon.png" />
+  
+        <h4 class="name">Admin</h4>
+        <p class="designation">Manager</p>
+  
+        <mat-divider></mat-divider>
+  
+        <button mat-button class="menu-button">
+          <a routerLink = "/allemployee"></a>
+            <mat-icon>account_box</mat-icon>
+            <span routerLink = "/allemployee/asd">Employee List</span>
+        </button>
+        <button mat-button class="menu-button">
+            <mat-icon>description</mat-icon>
+            <span routerLink = "/allleaves">Leave Requests</span>
+        </button>
+        <button mat-button class="menu-button">
+            <mat-icon></mat-icon>
+            <span></span>
+        </button>
+  
+        <mat-divider></mat-divider>
+  
+        <button mat-button class="menu-button">
+            <mat-icon>create</mat-icon>
+            <span routerLink = "/createEmply">Create Employee</span>
+        </button>
+
+        <button mat-button class="menu-button">
+            <mat-icon>edit</mat-icon>
+            <span routerLink = "/editemployee">Edit Employee</span>
+        </button>
+  
+  
+    </mat-sidenav>
+
